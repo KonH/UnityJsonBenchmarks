@@ -5,6 +5,7 @@ using UnityBenchmarkHarness;
 public class EntryPoint : MonoBehaviour {
 	
 	IEnumerator Start() {
+		Resources.UnloadUnusedAssets();
 		yield return new WaitForSeconds(3.0f);
 		Run();
 	}
@@ -27,7 +28,7 @@ public class EntryPoint : MonoBehaviour {
 			new TestCases.OneStringField { Field = "my_value" }
 		).WriteToConsole();
 
-		BenchmarkRunner.Run(
+		/*BenchmarkRunner.Run(
 			"FullSerializerBenchmarks.OneStringField",
 			10,
 			(obj1) => {
@@ -45,7 +46,7 @@ public class EntryPoint : MonoBehaviour {
 				result = obj1.Field == obj2.Field;
 			},
 			new TestCases.OneStringField { Field = "my_value" }
-		).WriteToConsole();
+		).WriteToConsole();*/
 
 		return result;
 	}
