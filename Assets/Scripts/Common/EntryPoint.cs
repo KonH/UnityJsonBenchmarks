@@ -1,32 +1,19 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityBenchmarkHarness;
+﻿using UnityBenchmarkHarness;
 
-public class EntryPoint : MonoBehaviour {
+public class EntryPoint : UnityBenchmarkRunner {
 	
-	IEnumerator Start() {
-		Resources.UnloadUnusedAssets();
-		yield return new WaitForSeconds(3.0f);
-		Run();
-	}
-
-	void Run() {
-		bool result = false;
-		result = OneStringField();
-		Debug.Log(result);
-	}
-
-	bool OneStringField() {
+	protected override bool RunInternal() {
 		var result = false;
-		BenchmarkRunner.Run(
-			"Baseline",
+		var runner = new BenchmarkRunner("Baseline");
+		runner.Run(
 			10,
 			(obj1) => {
 				var obj2 = new TestCases.OneStringField { Field = obj1.Field };
 				result = obj1.Field == obj2.Field;
 			},
 			new TestCases.OneStringField { Field = "my_value" }
-		).WriteToConsole();
+		);
+		Runners.Add(runner);
 
 		/*BenchmarkRunner.Run(
 			"FullSerializerBenchmarks.OneStringField",

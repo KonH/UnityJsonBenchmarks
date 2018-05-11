@@ -1,6 +1,3 @@
 [submodule "Assets/UnityBenchmarkHarness"]
 	path = Assets/UnityBenchmarkHarness
 	url = https://github.com/KonH/UnityBenchmarkHarness.git
-[submodule "Assets/Editor/UnityProfilerDataExporter"]
-	path = Assets/Editor/UnityProfilerDataExporter
-	url = https://github.com/KonH/unity-profiler-data-exporter.git
