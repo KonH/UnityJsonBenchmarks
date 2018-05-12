@@ -22,7 +22,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(baseline);
 
-		var fs = new BenchmarkRunner("FullSerializerBenchmarks.StringField_1");
+		var fs = new BenchmarkRunner("FullSerializer.StringField_1");
 		fs.Run(
 			10,
 			(obj1) => {
@@ -33,7 +33,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(fs);
 
-		var jsonNet = new BenchmarkRunner("JsonNetBenchmarks.StringField_1");
+		var jsonNet = new BenchmarkRunner("JsonNet.StringField_1");
 		jsonNet.Run(
 			10,
 			(obj1) => {
@@ -67,7 +67,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(baseline);
 
-		var fs = new BenchmarkRunner("FullSerializerBenchmarks.StringField_3");
+		var fs = new BenchmarkRunner("FullSerializer.StringField_3");
 		fs.Run(
 			10,
 			(obj1) => {
@@ -82,7 +82,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(fs);
 
-		var jsonNet = new BenchmarkRunner("JsonNetBenchmarks.StringField_3");
+		var jsonNet = new BenchmarkRunner("JsonNet.StringField_3");
 		jsonNet.Run(
 			10,
 			(obj1) => {
@@ -124,7 +124,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(baseline);
 
-		var fs = new BenchmarkRunner("FullSerializerBenchmarks.StringField_5");
+		var fs = new BenchmarkRunner("FullSerializer.StringField_5");
 		fs.Run(
 			10,
 			(obj1) => {
@@ -141,7 +141,7 @@ public class EntryPoint : UnityBenchmarkRunner {
 		);
 		Runners.Add(fs);
 
-		var jsonNet = new BenchmarkRunner("JsonNetBenchmarks.StringField_5");
+		var jsonNet = new BenchmarkRunner("JsonNet.StringField_5");
 		jsonNet.Run(
 			10,
 			(obj1) => {
